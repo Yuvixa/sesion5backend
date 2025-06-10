@@ -28,7 +28,7 @@ public class Docente {
 	private int estado;
 
 	@ManyToOne
-	@JoinColumn(name = "idUbigeo")
+	@JoinColumn(name = "idUbigeo", referencedColumnName = "idUbigeo")
 	private Ubigeo ubigeo;
 	
 	@Temporal(TemporalType.TIMESTAMP)
