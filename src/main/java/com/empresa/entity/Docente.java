@@ -21,7 +21,7 @@ public class Docente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="iddocente")
+	@Column(name="idDocente")
 	private int idDocente;
 	private String nombre;
 	private String dni;
@@ -33,6 +33,7 @@ public class Docente {
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
+	@Column(name="fechaRegistro")
 	private Date fechaRegistro;
 
 	
