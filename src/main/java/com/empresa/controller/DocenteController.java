@@ -27,14 +27,14 @@ public class DocenteController {
 	@Autowired
 	private DocenteService docenteService;
 
-	@GetMapping
+	@GetMapping("listadoDocente")
 	@ResponseBody
 	public ResponseEntity<List<Docente>> listaDocente() {
 		List<Docente> lista = docenteService.listaDocente();
 		return ResponseEntity.ok(lista);
 	}
 
-	@PostMapping
+	@PostMapping("registraDocente")
 	@ResponseBody
 	public ResponseEntity<Map<String, Object>> insertaDocente(@RequestBody Docente obj) {
 		Map<String, Object> salida = new HashMap<>();
